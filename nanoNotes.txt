@@ -1,0 +1,2 @@
+press Insert, then ctrl-x to output the result of any command you execute
+in command line

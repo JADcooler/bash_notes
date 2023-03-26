@@ -1,0 +1,6 @@
+Install with
+
+download .deb
+
+sudo dpkg -i /path/to/download
+

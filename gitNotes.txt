@@ -49,3 +49,15 @@ git diff INDEX
 #using --cached allows to diff with INDEX ignoring staged changes
 
 
+-----------
+
+git diff-tree DON HEAD -p --pretty
+#diff between any commit trees
+
+git tag TAG_NAME
+#writes HEAD To .git/refs/tags/TAG_NAME
+
+
+= till creating branches
+https://git-scm.com/docs/gitcore-tutorial#:~:text=did%20that%2C%20if%20you%20now%20look%20into%20your%20object%20directory%2C%20you%E2%80%99ll%20notice%20that%20Git%20will%20have%20added%20two%20new%20objects%20to%20the%20object
+=

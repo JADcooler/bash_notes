@@ -1,0 +1,51 @@
+https://git-scm.com/docs/gitcore-tutorial#:~:text=did%20that%2C%20if%20you%20now%20look%20into%20your%20object%20directory%2C%20you%E2%80%99ll%20notice%20that%20Git%20will%20have%20added%20two%20new%20objects%20to%20the%20object
+
+
+git update-index --add file1 file2
+# add untracked to tracked
+
+# added based on unique content
+# same content files will have commit in same folder
+# 	aka -> objects/same_folder/zipFile
+
+# object id is folder name appended with that index update
+# total aah itll be 40 bytes, with the first 2 from directory name
+
+
+git cat-file object_id -pts
+print content, type, size
+
+# Objects are immutable/they exist forecer once created
+
+git diff-files 
+# internal representation of change
+
+git write-tree
+# creates tree
+
+## OBJECTS ##
+
+#blobs are git adds
+#trees are git commits
+
+git commit-tree
+#requires current tree, parent commit tree, commit msg 
+#first 2 params as object names
+
+#git commit-tree also wants to get a commit message on its standard input,
+#only param requires tree and parent tree
+
+COMMIT SEQUENCE
+
+tree=$(git write-tree)
+commit=$(echo 'Initial commit' | git commit-tree $tree)
+git update-ref HEAD $commit
+-p to give parent
+
+git diff-index INDEX_NAME
+#shows diff between working tree and tree at INDEX
+aka 
+git diff INDEX
+#using --cached allows to diff with INDEX ignoring staged changes
+
+

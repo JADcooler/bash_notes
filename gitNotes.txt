@@ -61,3 +61,51 @@ git tag TAG_NAME
 = till creating branches
 https://git-scm.com/docs/gitcore-tutorial#:~:text=did%20that%2C%20if%20you%20now%20look%20into%20your%20object%20directory%2C%20you%E2%80%99ll%20notice%20that%20Git%20will%20have%20added%20two%20new%20objects%20to%20the%20object
 =
+
+git switch -c mybranch
+#c for create
+
+git checkout -b mybranch
+#create and change into that branch
+
+git checkout -d COMMIT_ID
+-d
+--detach
+Rather than checking out a branch to work on it, check out a commit for inspection
+
+git checkout branch^
+#^ parent commit
+#^^ grandparent commit
+
+git branch -f main HEAD~3
+#moves (by force) the main branch to three parents behind HEAD
+
+git branch -f main COMMIT_ID
+#TODO CHECK THIS
+
+git reset HEAD^
+#local branch
+
+git revert HEAD^
+#commit a new change that removes last commit
+
+either reset + push
+or revert
+
+git rebase -i HEAD~4
+#4 specifies the 4th ancestor, after which you will modify every descendant
+________________________________
+
+let's say you want to change a previous commit
+
+you can reorder commits such that the commit u want to change is in top (git rebase -i HEAD~n)
+then you can amend commit (git commit --amend)
+then you can order it back to original order (git rebase -i HEAD~n)
+____________________________________________________________________
+
+HOW TO SQUASH COMMITS ? WITH AND W/O INTERACTIVE REBASE
+
+
+====
+till https://learngitbranching.js.org/ [ADVANCED GIT TAGS AFTER JUGGLING COMMITS]
+===

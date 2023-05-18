@@ -1,0 +1,3 @@
+ctrl + shift + '['  to get current directory's stuff
+
+ctrl + '{' -> kinda the same key combo jfntgk meh

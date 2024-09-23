@@ -1,1 +1,3 @@
 ctrl shift e to open file panel
+
+ctrl alt right to open in another tabl
